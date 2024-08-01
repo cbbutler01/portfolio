@@ -4,17 +4,13 @@
 }
 
 body {
+  display:flex;
+  flex-direction: column;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100%;
 }
-img {
-  border-radius: 8px;
-  padding: 5px;
-  max-width: 20%;
-}
-img:hover{
-  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-}
+
 
 /* Style the top navigation bar */
 .topnav {
@@ -22,6 +18,13 @@ img:hover{
   background-color: #8b8378;
 }
 
+.topnav img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 125px;
+  height: auto;
+}
 /* Style the topnav links */
 .topnav a {
   float: left;
@@ -40,13 +43,27 @@ img:hover{
 
 /* Style the content */
 .content {
-  background-color: #ddd;
+  flex: 1;
+  background-color: #f1f1f1;
   padding: 10px;
-  height: 200px; /* Should be removed. Only for demonstration */
+  max-width: 100%;
+  height: auto;
+
+}
+
+.content img {
+  border-radius: 8px;
+  padding: 5px;
+  max-width: 20%;
+}
+
+.content img:hover{
+  box-shadow: 0 0 2px 1px rgba(104, 53, 16, 0.5);
 }
 
 /* Style the footer */
 .footer {
-  background-color: #f1f1f1;
   padding: 10px;
+  width: 100%;
+  background-color: #ddd;
 }
